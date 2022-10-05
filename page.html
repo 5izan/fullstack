@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            }
+            nav{
+                background-color: aquamarine;
+                display: flex;
+                height: 80px;
+                width: 100%;
+            }
+            nav ul{
+                float: right;
+                margin-right: 80px;
+                display: flex;
+            }
+            nav ul li{
+                position: relative;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+            nav ul li a{
+                color: white;
+                display: block;
+                padding: 0px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+            nav ul li a:hover{
+                background-color: brown;
+                transition: .5s;
+                color: royalblue;
+            }
+            nav ul li ul{
+                display: none;
+                background-color: aquamarine;
+                position: absolute;
+                color: royalblue;
+                font-size: 5px;
+                padding: 0px 13px;
+            }
+            nav ul li:hover > ul{
+                display: initial;
+            }
+            nav ol{
+                float: left;
+                padding-inline: 100px;
+                margin-inline: 600px;
+            }
+            nav ol a{
+                color: white;
+                display: block;
+                padding: 7px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+            nav ol a:hover{
+                
+                background-color: brown;
+                transition: .5s;
+                color: royalblue;
+            }
+            form{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <nav>
+                <label class="LOGO"><img src="LOGO" alt="reload" style="height: 70px;"></label>
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Courses</a>
+                    <ul class="drop">
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">CPP</a></li>
+                        <li><a href="#">JAVA</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                <ol><li><a href="#">Login/Register</a></li></ol>
+            </nav>
+            <div>
+                <form>
+                    <h4>Login with you're credentials</h4>
+                    <br><br>
+                    <label>UserName</label>
+                    <input type="text" name="username" placeholder="Insert text..">
+                    <br><br>
+                    <label>Password</label>
+                    <input type="password" name="Password" placeholder="Insert Password..">
+                    <br><br>
+                    <input type="submit" name="Login" placeholder="Login" style="margin-inline: 100px;" value="Login">
+                    <br><br>
+                    Don't have an account
+                    <input type="submit" name="Register" placeholder="Register" style="margin-inline: 20px;" value="Register">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
